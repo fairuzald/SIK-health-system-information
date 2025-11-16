@@ -1,97 +1,124 @@
-# Sistem Pelayanan Kesehatan - Health System
+# Health System - Hospital Management System
 
-Sistem pelayanan kesehatan modern dengan antarmuka yang responsif dan user-friendly untuk rumah sakit.
+Modern health service system with responsive and user-friendly interface for hospitals.
 
-## 📁 Struktur Folder
+## Folder Structure
 
-```
+```text
 health-system/
 ├── css/
-│   └── style.css          # Stylesheet utama dengan desain modern dan responsif
+│   └── style.css          # Main stylesheet with modern and responsive design
 ├── js/
-│   └── main.js            # JavaScript utama dengan fungsi-fungsi umum
+│   └── main.js            # Main JavaScript with common functions
 ├── assets/
-│   └── images/            # Folder untuk gambar dan assets
-├── index.html             # Halaman beranda dengan navbar
-├── pendaftaran.html       # Form pendaftaran pasien
-├── pemeriksaan.html       # Form pemeriksaan dokter
-├── farmasi.html           # Form farmasi & resep
-├── pembayaran.html         # Form pembayaran
-└── README.md              # Dokumentasi proyek
+│   └── images/            # Folder for images and assets
+├── index.html             # Homepage with navbar
+├── pendaftaran.html       # Patient registration form
+├── pemeriksaan.html       # Doctor examination form
+├── farmasi.html           # Pharmacy & prescription form
+├── pembayaran.html        # Payment form
+└── README.md              # Project documentation
 ```
 
-## 🎨 Fitur Desain
+## Design Features
 
-- **Modern & Clean**: Desain modern dengan warna utama #4200FF
-- **Responsive**: Fully responsive untuk desktop, tablet, dan mobile
-- **Compact**: Desain lebih compact untuk desktop
-- **Icons**: Menggunakan Lucide Icons untuk icon yang lebih baik
-- **Typography**: Font Poppins untuk readability yang lebih baik
-- **Glass Effect**: Efek glass card dengan backdrop-filter
-- **Smooth Animations**: Transisi dan animasi yang halus
+- **Modern & Clean**: Modern design with primary color #4200FF
+- **Responsive**: Fully responsive for desktop, tablet, and mobile
+- **Compact**: More compact design for desktop
+- **Icons**: Using Lucide Icons for better icons
+- **Typography**: Poppins font for better readability
+- **Glass Effect**: Glass card effect with backdrop-filter
+- **Smooth Animations**: Smooth transitions and animations
 
-## 🚀 Teknologi yang Digunakan
+## Technologies Used
 
-- **HTML5**: Struktur semantik
-- **CSS3**: Custom CSS dengan CSS Variables
+- **HTML5**: Semantic structure
+- **CSS3**: Custom CSS with CSS Variables
 - **JavaScript**: Vanilla JavaScript (ES6+)
-- **Lucide Icons**: Icon library modern
+- **Lucide Icons**: Modern icon library
 - **Google Fonts**: Poppins font family
 
-## 📱 Halaman
+## Pages
 
-1. **index.html** - Halaman beranda dengan informasi layanan dan proses
-2. **pendaftaran.html** - Form pendaftaran pasien baru
-3. **pemeriksaan.html** - Form pemeriksaan dokter
-4. **farmasi.html** - Form farmasi dan resep obat
-5. **pembayaran.html** - Form pembayaran dengan kalkulasi otomatis
+1. **index.html** - Homepage with service information and process
+2. **pendaftaran.html** - New patient registration form
+3. **pemeriksaan.html** - Doctor examination form
+4. **farmasi.html** - Pharmacy and prescription form
+5. **pembayaran.html** - Payment form with automatic calculation
 
-## 🎯 Fitur Utama
+## Main Features
 
-- Navbar responsif dengan mobile menu
+- Responsive navbar with mobile menu
 - Form validation
-- Kalkulasi biaya otomatis
+- Automatic cost calculation
 - Toast notifications
 - Smooth scrolling
-- Icon integration dengan Lucide
+- Icon integration with Lucide
 - Responsive grid system
 - Modern card components
 
-## 📝 Cara Menggunakan
+## How to Use
 
-1. Buka `index.html` di browser untuk melihat halaman beranda
-2. Navigasi melalui navbar untuk mengakses berbagai form
-3. Semua form sudah terintegrasi dengan JavaScript untuk validasi dan kalkulasi
-4. Desain responsif akan menyesuaikan dengan ukuran layar
+### Online Access (Fastest Way)
 
-## 🎨 Customization
+**Open directly through the following link:**
+**[https://sik-xyz.vercel.app/](https://sik-xyz.vercel.app/)**
 
-Warna dan styling dapat diubah melalui CSS Variables di `css/style.css`:
+Or copy and open in browser: `https://sik-xyz.vercel.app/`
+
+---
+
+### Running with Live Server (VS Code)
+
+1. **Install Live Server Extension in VS Code:**
+
+   - Open VS Code
+   - Click on the Extensions icon (or press `Ctrl+Shift+X` / `Cmd+Shift+X`)
+   - Search for "Live Server" by Ritwick Dey
+   - Click "Install" to install the extension
+
+2. **Running the Project:**
+
+   - Open the project folder in VS Code
+   - Right-click on the `index.html` file
+   - Select "Open with Live Server" from the context menu
+   - Or click the "Go Live" button in the status bar at the bottom of VS Code
+   - Browser will automatically open with URL `http://127.0.0.1:5500` or another port
+
+3. **Alternative - Open Directly in Browser:**
+   - Open `index.html` in browser to view the homepage
+   - Navigate through the navbar to access various forms
+   - All forms are integrated with JavaScript for validation and calculation
+   - Responsive design will adjust to screen size
+
+## Customization
+
+Colors and styling can be changed through CSS Variables in `css/style.css`:
 
 ```css
 :root {
-    --primary-color: #4200FF;
-    --primary-hover: #3500CC;
-    --text-primary: #404040;
-    --text-secondary: #9D9D9D;
-    /* ... */
+  --primary-color: #4200ff;
+  --primary-hover: #3500cc;
+  --text-primary: #404040;
+  --text-secondary: #9d9d9d;
+  /* ... */
 }
 ```
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - **Desktop**: > 1024px
 - **Tablet**: 768px - 1024px
 - **Mobile**: < 768px
 - **Small Mobile**: < 480px
 
-## 🔧 Browser Support
+## Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
-## 📄 License
+## License
 
-© 2025 Sistem Pelayanan Kesehatan - Rumah Sakit Umum
+© 2025 Health System - General Hospital
