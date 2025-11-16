@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Form Pendaftaran Pasien - Rumah Sakit</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">
+          <div class="navbar-logo">
+            <img src="logo.png" alt="RS XYZ" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div>
+            <div class="navbar-title">RS XYZ</div>
+            <div class="navbar-subtitle">Rumah Sakit XYZ</div>
+          </div>
+        </a>
+
+         <ul class="navbar-menu">
+           <li><a href="index.html">Beranda</a></li>
+           <li><a href="pendaftaran.html" class="active">Pendaftaran</a></li>
+           <li><a href="pemeriksaan.html">Pemeriksaan</a></li>
+           <li><a href="farmasi.html">Farmasi</a></li>
+           <li><a href="pembayaran.html">Pembayaran</a></li>
+           <li><a href="tentang.html">Tentang Kami</a></li>
+         </ul>
+
+
+        <button class="mobile-menu-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Process Stepper -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 0;">
+      <div class="container-sm">
+        <div class="process-stepper" data-aos="fade-down" style="margin-bottom: 1rem;">
+          <div class="process-stepper-container">
+            <div class="process-step active">
+              <a href="pendaftaran.html" class="process-step-link">
+                <div class="process-step-number">1</div>
+                <i data-lucide="user-plus" class="process-step-icon"></i>
+                <span class="process-step-label">Pendaftaran</span>
+              </a>
+            </div>
+            <div class="process-step">
+              <a href="pemeriksaan.html" class="process-step-link">
+                <div class="process-step-number">2</div>
+                <i data-lucide="stethoscope" class="process-step-icon"></i>
+                <span class="process-step-label">Pemeriksaan</span>
+              </a>
+            </div>
+            <div class="process-step">
+              <a href="farmasi.html" class="process-step-link">
+                <div class="process-step-number">3</div>
+                <i data-lucide="pill" class="process-step-icon"></i>
+                <span class="process-step-label">Farmasi</span>
+              </a>
+            </div>
+            <div class="process-step">
+              <a href="pembayaran.html" class="process-step-link">
+                <div class="process-step-number">4</div>
+                <i data-lucide="credit-card" class="process-step-icon"></i>
+                <span class="process-step-label">Pembayaran</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="section">
+      <div class="container-sm">
+        <div class="card" data-aos="fade-up">
+          <div class="card-header">
+            <div class="d-flex align-items-center gap-2">
+              <div
+                class="glass-card"
+                style="padding: 0.75rem; border-radius: 12px; background: var(--primary-light);"
+              >
+                <i
+                  data-lucide="user-plus"
+                  style="width: 24px; height: 24px; color: var(--primary-color);"
+                ></i>
+              </div>
+              <div>
+                <h2 style="margin: 0; font-size: 1.25rem; color: var(--text-primary);">
+                  Form Pendaftaran Pasien
+                </h2>
+                <p
+                  style="
+                    margin: 0.25rem 0 0 0;
+                    color: var(--text-secondary);
+                    font-size: 0.8125rem;
+                  "
+                >
+                  Tahap I: Pasien Mendaftarkan Diri - Data Umum Pasien
+                </p>
+                <p
+                  style="
+                    margin: 0.5rem 0 0 0;
+                    color: var(--text-light);
+                    font-size: 0.75rem;
+                    line-height: 1.5;
+                  "
+                >
+                  Lengkapi data diri Anda dengan benar untuk memudahkan proses pelayanan kesehatan.
+                  Informasi yang Anda berikan akan dijaga kerahasiaannya dan hanya digunakan untuk keperluan medis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <form id="pendaftaranForm">
+              <!-- Data Identitas -->
+              <div class="mb-4" data-aos="fade-up"100">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-2"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="id-card"
+                    style="width: 24px; height: 24px"
+                  ></i>
+                  Data Identitas Pasien
+                </h3>
+                <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                  Mohon isi data identitas sesuai dengan dokumen resmi (KTP/SIM/Paspor).
+                  Nomor Rekam Medis akan otomatis dibuat setelah pendaftaran berhasil.
+                </p>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="file-text"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Nomor Rekam Medis *
+                      </label>
+                      <input
+                        type="text"
+                        name="nomorRM"
+                        required
+                        class="form-control"
+                        placeholder="Otomatis terisi"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="credit-card"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        NIK (Nomor Induk Kependudukan) *
+                      </label>
+                      <input
+                        type="text"
+                        name="nik"
+                        required
+                        maxlength="16"
+                        class="form-control"
+                        placeholder="16 digit NIK"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    <i data-lucide="user" style="width: 18px; height: 18px"></i>
+                    Nama Lengkap *
+                  </label>
+                  <input
+                    type="text"
+                    name="namaLengkap"
+                    required
+                    class="form-control"
+                    placeholder="Nama lengkap sesuai KTP"
+                  />
+                </div>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="calendar"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Tanggal Lahir *
+                      </label>
+                      <input
+                        type="date"
+                        name="tanggalLahir"
+                        required
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="users"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Jenis Kelamin *
+                      </label>
+                      <select name="jenisKelamin" required class="form-control">
+                        <option value="">Pilih jenis kelamin</option>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    <i
+                      data-lucide="map-pin"
+                      style="width: 18px; height: 18px"
+                    ></i>
+                    Alamat Lengkap *
+                  </label>
+                  <textarea
+                    name="alamat"
+                    required
+                    rows="4"
+                    class="form-control"
+                    placeholder="Alamat tempat tinggal saat ini"
+                  ></textarea>
+                </div>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="phone"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Nomor Telepon *
+                      </label>
+                      <input
+                        type="tel"
+                        name="telepon"
+                        required
+                        class="form-control"
+                        placeholder="08xxxxxxxxxx"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="mail"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="email@example.com"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Data Tambahan -->
+              <div class="mb-4" data-aos="fade-up"200">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i data-lucide="info" style="width: 18px; height: 18px"></i>
+                  Data Tambahan
+                </h3>
+
+                <div class="row">
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="droplet"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Golongan Darah
+                      </label>
+                      <select name="golonganDarah" class="form-control">
+                        <option value="">Pilih golongan darah</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="heart"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Agama
+                      </label>
+                      <select name="agama" class="form-control">
+                        <option value="">Pilih agama</option>
+                        <option value="islam">Islam</option>
+                        <option value="kristen">Kristen</option>
+                        <option value="katolik">Katolik</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="buddha">Buddha</option>
+                        <option value="konghucu">Konghucu</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="heart-handshake"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Status Perkawinan
+                      </label>
+                      <select name="statusPerkawinan" class="form-control">
+                        <option value="">Pilih status</option>
+                        <option value="belum-kawin">Belum Kawin</option>
+                        <option value="kawin">Kawin</option>
+                        <option value="cerai">Cerai</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    <i
+                      data-lucide="briefcase"
+                      style="width: 18px; height: 18px"
+                    ></i>
+                    Pekerjaan
+                  </label>
+                  <input
+                    type="text"
+                    name="pekerjaan"
+                    class="form-control"
+                    placeholder="Pekerjaan saat ini"
+                  />
+                </div>
+              </div>
+
+              <!-- Kontak Darurat -->
+              <div class="mb-4" data-aos="fade-up"300">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i data-lucide="phone" style="width: 18px; height: 18px"></i>
+                  Kontak Darurat / Keluarga
+                </h3>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="user-circle"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Nama Keluarga
+                      </label>
+                      <input
+                        type="text"
+                        name="namaKeluarga"
+                        class="form-control"
+                        placeholder="Nama lengkap keluarga"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="users-2"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Hubungan
+                      </label>
+                      <input
+                        type="text"
+                        name="hubunganKeluarga"
+                        class="form-control"
+                        placeholder="Contoh: Suami, Istri, Anak"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    <i
+                      data-lucide="phone-call"
+                      style="width: 18px; height: 18px"
+                    ></i>
+                    Nomor Telepon Keluarga
+                  </label>
+                  <input
+                    type="tel"
+                    name="teleponKeluarga"
+                    class="form-control"
+                    placeholder="08xxxxxxxxxx"
+                  />
+                </div>
+              </div>
+
+              <!-- Data Asuransi -->
+              <div class="mb-4" data-aos="fade-up"400">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-2"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="shield-check"
+                    style="width: 24px; height: 24px"
+                  ></i>
+                  Data Asuransi / Jaminan Kesehatan
+                </h3>
+                <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                  Jika Anda memiliki kartu BPJS Kesehatan, Asuransi Swasta, atau jaminan kesehatan lainnya,
+                  mohon lengkapi data berikut untuk memudahkan proses klaim dan pembayaran.
+                </p>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="shield"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Jenis Asuransi
+                      </label>
+                      <select name="jenisAsuransi" class="form-control">
+                        <option value="">Pilih jenis asuransi</option>
+                        <option value="bpjs">BPJS Kesehatan</option>
+                        <option value="umum">Umum (Mandiri)</option>
+                        <option value="asuransi-swasta">Asuransi Swasta</option>
+                        <option value="jaminan-perusahaan">
+                          Jaminan Perusahaan
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">
+                        <i
+                          data-lucide="credit-card"
+                          style="width: 18px; height: 18px"
+                        ></i>
+                        Nomor Asuransi / BPJS
+                      </label>
+                      <input
+                        type="text"
+                        name="nomorAsuransi"
+                        class="form-control"
+                        placeholder="Nomor kartu asuransi"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div
+                class="d-flex gap-2 action-buttons-container"
+                style="margin-top: 1.5rem; margin-bottom: 0; padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem;"
+                data-aos="fade-up"
+500"
+              >
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+                  style="flex: 1"
+                >
+                  <i data-lucide="save"></i>
+                  Simpan Data Pendaftaran
+                </button>
+                <button type="reset" class="btn btn-secondary btn-lg">
+                  <i data-lucide="x"></i>
+                  Batal
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">
+            © 2025 RS XYZ - Rumah Sakit XYZ
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Generate random RM number
+      document.querySelector('input[name="nomorRM"]').value =
+        'RM' + Date.now().toString().slice(-8);
+
+      document
+        .getElementById('pendaftaranForm')
+        .addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData);
+
+          console.log('Data Pendaftaran:', data);
+
+          if (typeof HealthSystem !== 'undefined' && HealthSystem.showToast) {
+            HealthSystem.showToast(
+              'Data pendaftaran berhasil disimpan!',
+              'success'
+            );
+          } else {
+            alert(
+              `✅ Data pendaftaran berhasil disimpan!\n\nPasien: ${data.namaLengkap}\nNIK: ${data.nik}\n\nSilakan lanjut ke tahap pemeriksaan dokter.`
+            );
+          }
+        });
+    </script>
+  </body>
+</html>

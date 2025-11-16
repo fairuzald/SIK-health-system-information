@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Form Farmasi & Resep - Rumah Sakit</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">
+                    <img src="logo.png" alt="RS XYZ" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div>
+                    <div class="navbar-title">RS XYZ</div>
+                    <div class="navbar-subtitle">Rumah Sakit XYZ</div>
+                </div>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                <li><a href="pemeriksaan.html">Pemeriksaan</a></li>
+                <li><a href="farmasi.html" class="active">Farmasi</a></li>
+                <li><a href="pembayaran.html">Pembayaran</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+            </ul>
+
+
+            <button class="mobile-menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Process Stepper -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 0;">
+      <div class="container-sm">
+        <div class="process-stepper" data-aos="fade-down" style="margin-bottom: 1rem;">
+          <div class="process-stepper-container">
+            <div class="process-step completed">
+              <a href="pendaftaran.html" class="process-step-link">
+                <div class="process-step-number">1</div>
+                <i data-lucide="user-plus" class="process-step-icon"></i>
+                <span class="process-step-label">Pendaftaran</span>
+              </a>
+            </div>
+            <div class="process-step completed">
+              <a href="pemeriksaan.html" class="process-step-link">
+                <div class="process-step-number">2</div>
+                <i data-lucide="stethoscope" class="process-step-icon"></i>
+                <span class="process-step-label">Pemeriksaan</span>
+              </a>
+            </div>
+            <div class="process-step active">
+              <a href="farmasi.html" class="process-step-link">
+                <div class="process-step-number">3</div>
+                <i data-lucide="pill" class="process-step-icon"></i>
+                <span class="process-step-label">Farmasi</span>
+              </a>
+            </div>
+            <div class="process-step">
+              <a href="pembayaran.html" class="process-step-link">
+                <div class="process-step-number">4</div>
+                <i data-lucide="credit-card" class="process-step-icon"></i>
+                <span class="process-step-label">Pembayaran</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="section">
+      <div class="container-sm">
+        <div class="card" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="glass-card" style="padding: 0.75rem; border-radius: 12px; background: var(--primary-light);">
+                            <i data-lucide="pill" style="width: 24px; height: 24px; color: var(--primary-color);"></i>
+                        </div>
+                        <div>
+                            <h2 style="margin: 0; font-size: 1.25rem; color: var(--text-primary);">Form Farmasi & Resep</h2>
+                            <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.8125rem;">Tahap III: Diberi Resep dan/atau Rujukan - Data Obat</p>
+                            <p style="margin: 0.5rem 0 0 0; color: var(--text-light); font-size: 0.75rem; line-height: 1.5;">
+                              Setelah pemeriksaan, dokter akan memberikan resep obat sesuai dengan diagnosis.
+                              Pastikan semua informasi obat tercatat dengan benar untuk keamanan dan efektivitas pengobatan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body" style="padding-bottom: 2rem;">
+                    <form id="farmasiForm">
+                        <!-- Data Resep -->
+                        <div class="mb-4" data-aos="fade-up"100">
+                            <h3 class="d-flex align-items-center gap-2 mb-2" style="color: var(--primary-color); font-size: 1.125rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                                Data Resep
+                            </h3>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Nomor resep akan otomatis dibuat oleh sistem. Pastikan data pasien dan dokter pemberi resep sudah sesuai.
+                            </p>
+
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nomor Resep *</label>
+                                        <input type="text" name="nomorResep" required class="form-control" placeholder="Otomatis terisi" readonly>
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Tanggal Resep *</label>
+                                        <input type="date" name="tanggalResep" required class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nomor Rekam Medis *</label>
+                                        <input type="text" name="nomorRM" required class="form-control" placeholder="Masukkan nomor RM">
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nama Pasien *</label>
+                                        <input type="text" name="namaPasien" required class="form-control" placeholder="Nama lengkap pasien">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nama Dokter Pemberi Resep *</label>
+                                        <input type="text" name="namaDokter" required class="form-control" placeholder="dr. Nama Dokter">
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nama Apoteker *</label>
+                                        <input type="text" name="namaApoteker" required class="form-control" placeholder="Apt. Nama Apoteker">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Jenis Resep</label>
+                                <select name="jenisResep" class="form-control">
+                                    <option value="">Pilih jenis resep</option>
+                                    <option value="biasa">Resep Biasa</option>
+                                    <option value="psikotropika">Resep Psikotropika</option>
+                                    <option value="narkotika">Resep Narkotika</option>
+                                    <option value="racikan">Resep Racikan</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Daftar Obat -->
+                        <div class="mb-4" data-aos="fade-up"200">
+                            <div class="d-flex align-items-center justify-content-between mb-2" style="border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <h3 class="d-flex align-items-center gap-2" style="color: var(--primary-color); font-size: 1.125rem; margin: 0;">
+                                    <i data-lucide="pill" style="width: 18px; height: 18px;"></i>
+                                    Daftar Obat
+                                </h3>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Tambahkan semua obat yang diresepkan dokter. Pastikan nama obat, dosis, jumlah, dan aturan pakai tercatat dengan benar.
+                              Klik tombol "Tambah Obat" untuk menambah item baru.
+                            </p>
+                                <button type="button" onclick="addObat()" class="btn btn-primary btn-sm">
+                                    <i data-lucide="plus"></i>
+                                    Tambah Obat
+                                </button>
+                            </div>
+
+                            <div id="obatContainer"></div>
+                        </div>
+
+                        <!-- Total Biaya -->
+                        <div class="mb-4" data-aos="fade-up"300" style="padding-left: 1rem; padding-right: 1rem;" >
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Total biaya akan otomatis dihitung berdasarkan daftar obat yang telah ditambahkan.
+                            </p>
+                            <div class="card" style="background: var(--primary-color); color: white; padding: 1.25rem;">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <p style="margin: 0 0 0.5rem 0; opacity: 0.9; font-size: 0.9375rem;">Total Biaya Obat</p>
+                                        <p style="margin: 0; font-size: 2rem; font-weight: 700;" id="totalBiaya">Rp 0</p>
+                                    </div>
+                                    <i data-lucide="pill" style="width: 48px; height: 48px; opacity: 0.2;"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Catatan -->
+                        <div class="mb-4" data-aos="fade-up"400" style="padding-left: 1rem; padding-right: 1rem;" >
+                            <h3 class="d-flex align-items-center gap-2 mb-2" style="color: var(--primary-color); font-size: 1.125rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                                Catatan Farmasi
+                            </h3>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Catat informasi penting seperti peringatan alergi, interaksi obat, atau instruksi khusus dari apoteker
+                              yang perlu diketahui pasien sebelum mengonsumsi obat.
+                            </p>
+
+                            <div style="padding-left: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Catatan Apoteker</label>
+                                    <textarea name="catatanResep" rows="4" class="form-control" placeholder="Catatan khusus, peringatan alergi, atau instruksi tambahan"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="d-flex gap-2 action-buttons-container" style="margin-top: 1.5rem; margin-bottom: 0; padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem; " data-aos="fade-up"500">
+                            <button type="submit" class="btn btn-primary btn-lg" style="flex: 1;">
+                                <i data-lucide="save"></i>
+                                Simpan Resep & Proses
+                            </button>
+                            <button type="reset" class="btn btn-secondary btn-lg">
+                                <i data-lucide="x"></i>
+                                Batal
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 RS XYZ - Rumah Sakit XYZ</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        let obatCount = 0;
+
+        function addObat() {
+            obatCount++;
+            const container = document.getElementById('obatContainer');
+
+            const obatHTML = `
+                <div class="card mb-3" id="obat-${obatCount}" style="background: var(--primary-light);">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="btn btn-primary btn-sm">
+                                <i data-lucide="pill"></i>
+                                Obat #${obatCount}
+                            </span>
+                            <button type="button" onclick="removeObat(${obatCount})" class="btn btn-sm" style="background: #ef4444; color: white;">
+                                <i data-lucide="trash-2"></i>
+                                Hapus
+                            </button>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Nama Obat *</label>
+                                    <input type="text" name="namaObat[]" required class="form-control" placeholder="Nama obat generik/paten">
+                                </div>
+                            </div>
+                            <div class="col col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Jenis/Bentuk Sediaan *</label>
+                                    <select name="jenisObat[]" required class="form-control">
+                                        <option value="">Pilih jenis</option>
+                                        <option value="tablet">Tablet</option>
+                                        <option value="kapsul">Kapsul</option>
+                                        <option value="sirup">Sirup</option>
+                                        <option value="salep">Salep</option>
+                                        <option value="krim">Krim</option>
+                                        <option value="injeksi">Injeksi</option>
+                                        <option value="tetes">Tetes</option>
+                                        <option value="inhaler">Inhaler</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-md-4">
+                                <div class="form-group">
+                                    <label class="form-label">Dosis *</label>
+                                    <input type="text" name="dosis[]" required class="form-control" placeholder="500 mg">
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="form-group">
+                                    <label class="form-label">Jumlah *</label>
+                                    <input type="number" name="jumlah[]" required class="form-control obat-jumlah" placeholder="10" onchange="calculateTotal()">
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="form-group">
+                                    <label class="form-label">Harga per Unit (Rp) *</label>
+                                    <input type="number" name="harga[]" required class="form-control obat-harga" placeholder="5000" onchange="calculateTotal()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Aturan Pakai *</label>
+                            <textarea name="aturanPakai[]" required rows="3" class="form-control" placeholder="3 x sehari 1 tablet sesudah makan"></textarea>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.insertAdjacentHTML('beforeend', obatHTML);
+            if (typeof HealthSystem !== 'undefined' && HealthSystem.reinitIcons) {
+                HealthSystem.reinitIcons();
+            } else if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        function removeObat(id) {
+            const element = document.getElementById(`obat-${id}`);
+            if (element) {
+                element.remove();
+                calculateTotal();
+                if (typeof HealthSystem !== 'undefined' && HealthSystem.reinitIcons) {
+                    HealthSystem.reinitIcons();
+                } else if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }
+        }
+
+        function calculateTotal() {
+            const jumlahInputs = document.querySelectorAll('.obat-jumlah');
+            const hargaInputs = document.querySelectorAll('.obat-harga');
+            let total = 0;
+
+            jumlahInputs.forEach((input, index) => {
+                const jumlah = parseInt(input.value) || 0;
+                const harga = parseInt(hargaInputs[index].value) || 0;
+                total += jumlah * harga;
+            });
+
+            document.getElementById('totalBiaya').textContent = 'Rp ' + total.toLocaleString('id-ID');
+        }
+
+        document.getElementById('farmasiForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const total = document.getElementById('totalBiaya').textContent;
+
+            if (typeof HealthSystem !== 'undefined' && HealthSystem.showToast) {
+                HealthSystem.showToast(`Data resep berhasil disimpan! Total: ${total}`, 'success');
+            } else {
+                alert(`✅ Data resep berhasil disimpan!\n\nPasien: ${formData.get('namaPasien')}\nApoteker: ${formData.get('namaApoteker')}\n${total}\n\nSilakan lanjut ke tahap pembayaran.`);
+            }
+        });
+
+        // Generate random resep number
+        document.querySelector('input[name="nomorResep"]').value = 'RES' + Date.now().toString().slice(-8);
+
+        // Add first obat on page load
+        addObat();
+    </script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RS XYZ - Rumah Sakit XYZ dengan layanan terbaik untuk kesehatan Anda"
+    />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>RS XYZ</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Additional homepage styles */
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .stat-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 13px;
+        box-shadow: 0px 2.8743px 17.2458px -0.718575px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: var(--text-secondary);
+        font-size: 0.75rem;
+      }
+
+      .services-section {
+        background: white;
+        padding: 4rem 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-title h2 {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .section-title p {
+        color: var(--text-light);
+        font-size: 0.8125rem;
+      }
+
+      @media (max-width: 768px) {
+        .section-title {
+          margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+          font-size: clamp(1.125rem, 4vw, 1.25rem);
+        }
+
+        .section-title p {
+          font-size: 0.75rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .section-title {
+          margin-bottom: 1.5rem;
+        }
+
+        .section-title h2 {
+          font-size: clamp(1rem, 5vw, 1.125rem);
+        }
+
+        .section-title p {
+          font-size: 0.6875rem;
+        }
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .process-step {
+        text-align: center;
+        padding: 2rem;
+        background: var(--bg-white);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .process-step:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+      }
+
+      .step-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      .step-description {
+        color: var(--text-secondary);
+        font-size: 0.8125rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 1024px) {
+        .process-steps {
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1.5rem;
+          margin-top: 2rem;
+        }
+
+        .process-step {
+          padding: 1.5rem;
+        }
+
+        .process-step .image-container {
+          height: 160px !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .process-steps {
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+          margin-top: 1.5rem;
+        }
+
+        .process-step {
+          padding: 1.25rem;
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .process-step .image-container {
+          height: 140px !important;
+          order: 1;
+        }
+
+        .step-number {
+          width: 36px;
+          height: 36px;
+          font-size: 0.875rem;
+          margin: 0 0 0.75rem 0;
+          order: 2;
+        }
+
+        .step-title {
+          font-size: 0.9375rem;
+          order: 3;
+          margin-bottom: 0.5rem;
+        }
+
+        .step-description {
+          font-size: 0.75rem;
+          order: 4;
+          margin-bottom: 0.75rem;
+        }
+
+        .process-step .btn {
+          order: 5;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .process-steps {
+          gap: 1rem;
+          margin-top: 1.25rem;
+        }
+
+        .process-step {
+          padding: 1rem;
+        }
+
+        .process-step .image-container {
+          height: 120px !important;
+        }
+
+        .step-number {
+          width: 32px;
+          height: 32px;
+          font-size: 0.8125rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .step-title {
+          font-size: 0.875rem;
+        }
+
+        .step-description {
+          font-size: 0.6875rem;
+          line-height: 1.5;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .process-step {
+          padding: 0.875rem;
+        }
+
+        .process-step .image-container {
+          height: 100px !important;
+        }
+
+        .step-number {
+          width: 28px;
+          height: 28px;
+          font-size: 0.75rem;
+        }
+      }
+
+      .cta-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--primary-hover) 100%
+        );
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      .cta-title {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        margin-bottom: 1rem;
+      }
+
+      .cta-description {
+        font-size: clamp(0.875rem, 1.75vw, 1rem);
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">
+          <div class="navbar-logo">
+            <img src="logo.png" alt="RS XYZ" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div>
+            <div class="navbar-title">RS XYZ</div>
+            <div class="navbar-subtitle">Rumah Sakit XYZ</div>
+          </div>
+        </a>
+
+            <ul class="navbar-menu">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pemeriksaan.html">Pemeriksaan</a></li>
+          <li><a href="farmasi.html">Farmasi</a></li>
+          <li><a href="pembayaran.html">Pembayaran</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+
+
+        <button class="mobile-menu-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div>
+            <h1 class="hero-title" data-aos="fade-up">
+              Kami Peduli dengan Kesehatan Anda
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up"100">
+              Kesehatan yang baik adalah keadaan kesejahteraan mental, fisik dan
+              sosial yang lengkap, dan bukan hanya berarti tidak adanya
+              penyakit. Kami menyediakan layanan kesehatan terbaik dengan dokter
+              yang berkualitas dan peralatan medis modern.
+            </p>
+            <div class="hero-actions" data-aos="fade-up"200">
+              <a href="pendaftaran.html" class="btn btn-primary btn-lg">
+                <i data-lucide="calendar-plus"></i>
+                Daftar Sekarang
+              </a>
+              <a href="#layanan" class="btn btn-secondary btn-lg">
+                <i data-lucide="play-circle"></i>
+                Lihat Layanan
+              </a>
+            </div>
+
+            <div class="hero-stats" data-aos="fade-up"300">
+              <div class="stat-card" data-aos="zoom-in"400">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Pasien Puas</div>
+              </div>
+              <div class="stat-card" data-aos="zoom-in"500">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Dokter Ahli</div>
+              </div>
+              <div class="stat-card" data-aos="zoom-in"600">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Layanan</div>
+              </div>
+              <div class="stat-card" data-aos="zoom-in"700">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Tahun Pengalaman</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image" data-aos="fade-left"200">
+            <div
+              class="image-container"
+              style="
+                min-height: 400px;
+                background: linear-gradient(
+                  135deg,
+                  var(--primary-light) 0%,
+                  transparent 100%
+                );
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&q=80"
+                alt="Healthcare Services"
+                style="
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: var(--border-radius-lg);
+                "
+              />
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="services-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Layanan Medis Kami</h2>
+          <p>Kami berdedikasi untuk memberikan layanan medis terbaik</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up"100">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=300&fit=crop&q=80"
+                alt="Laboratorium Rumah Sakit"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="microscope"></i>
+            </div>
+            <h3 class="feature-title">Laboratorium Terlengkap</h3>
+            <p class="feature-description">
+              Laboratorium dengan peralatan modern untuk pemeriksaan kesehatan
+              yang akurat
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up"200">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop&q=80"
+                alt="Ambulans Darurat"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="ambulance"></i>
+            </div>
+            <h3 class="feature-title">Ambulans Darurat</h3>
+            <p class="feature-description">
+              Layanan ambulans 24/7 untuk penanganan darurat yang cepat dan
+              tepat
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up"300">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop&q=80"
+                alt="Janji Temu Online"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="calendar-check"></i>
+            </div>
+            <h3 class="feature-title">Janji Temu Online</h3>
+            <p class="feature-description">
+              Sistem reservasi online yang mudah untuk kenyamanan pasien
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up"400">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop&q=80"
+                alt="Call Center Rumah Sakit"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="phone-call"></i>
+            </div>
+            <h3 class="feature-title">Call Center</h3>
+            <p class="feature-description">
+              Layanan call center siap membantu Anda 24 jam sehari
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up"500">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop"
+                alt="Dokter Spesialis"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="stethoscope"></i>
+            </div>
+            <h3 class="feature-title">Dokter Spesialis</h3>
+            <p class="feature-description">
+              Tim dokter spesialis berpengalaman di berbagai bidang
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up"600">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=300&fit=crop"
+                alt="Apotek"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="pill"></i>
+            </div>
+            <h3 class="feature-title">Apotek Lengkap</h3>
+            <p class="feature-description">
+              Apotek dengan obat-obatan lengkap dan apoteker profesional
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="proses" class="section" style="background: var(--bg-gray)">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Proses Pelayanan</h2>
+          <p>Langkah-langkah mudah untuk mendapatkan layanan kesehatan</p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step" data-aos="fade-up"100">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop&q=80"
+                alt="Pendaftaran Pasien"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="step-number">1</div>
+            <h3 class="step-title">Pendaftaran</h3>
+            <p class="step-description">
+              Daftarkan diri Anda dengan mengisi formulir pendaftaran pasien
+              secara online atau langsung di rumah sakit
+            </p>
+            <a href="pendaftaran.html" class="btn btn-primary btn-sm mt-2">
+              Daftar Sekarang
+            </a>
+          </div>
+
+          <div class="process-step" data-aos="fade-up"200">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop&q=80"
+                alt="Pemeriksaan Dokter"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="step-number">2</div>
+            <h3 class="step-title">Pemeriksaan</h3>
+            <p class="step-description">
+              Dokter akan melakukan pemeriksaan menyeluruh dan memberikan
+              diagnosis serta rencana pengobatan
+            </p>
+            <a href="pemeriksaan.html" class="btn btn-primary btn-sm mt-2">
+              Lihat Detail
+            </a>
+          </div>
+
+          <div class="process-step" data-aos="fade-up"300">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=300&fit=crop&q=80"
+                alt="Farmasi Apotek"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="step-number">3</div>
+            <h3 class="step-title">Farmasi</h3>
+            <p class="step-description">
+              Dapatkan resep obat dari dokter dan tebus di apotek rumah sakit
+              dengan pelayanan yang cepat
+            </p>
+            <a href="farmasi.html" class="btn btn-primary btn-sm mt-2">
+              Lihat Detail
+            </a>
+          </div>
+
+          <div class="process-step" data-aos="fade-up"400">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&q=80"
+                alt="Pembayaran"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="step-number">4</div>
+            <h3 class="step-title">Pembayaran</h3>
+            <p class="step-description">
+              Lakukan pembayaran dengan berbagai metode pembayaran yang tersedia
+              secara mudah dan aman
+            </p>
+            <a href="pembayaran.html" class="btn btn-primary btn-sm mt-2">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="cta-title text-white" style="color: white;" data-aos="fade-up"100">
+          Siap Memulai Perawatan Kesehatan Anda?
+        </h2>
+        <p class="cta-description" data-aos="fade-up"200">
+          Daftarkan diri Anda sekarang dan dapatkan layanan kesehatan terbaik
+          dari kami
+        </p>
+        <a
+          href="pendaftaran.html"
+          class="btn btn-lg"
+          style="background: white; color: var(--primary-color)"
+          data-aos="zoom-in"
+300"
+        >
+          <i data-lucide="arrow-right"></i>
+          Mulai Sekarang
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">
+            © 2025 RS XYZ - Rumah Sakit XYZ
+          </p>
+          <p
+            class="footer-text"
+            style="margin-top: 0.5rem; font-size: 0.875rem"
+          >
+            Jl. Kesehatan No. 123, Jakarta | Telp: (021) 1234-5678 | Email:
+            info@rsxyz.com
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

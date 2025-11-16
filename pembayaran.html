@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Form Pembayaran - Rumah Sakit</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .biaya-item {
+            background: var(--bg-gray);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--border-color);
+            margin-bottom: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .biaya-item:hover {
+            background: #f9fafb;
+        }
+
+        .biaya-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, var(--primary-light) 0%, transparent 100%);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            border: 2px solid var(--primary-color);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .summary-total {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">
+                    <img src="logo.png" alt="RS XYZ" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div>
+                    <div class="navbar-title">RS XYZ</div>
+                    <div class="navbar-subtitle">Rumah Sakit XYZ</div>
+                </div>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                <li><a href="pemeriksaan.html">Pemeriksaan</a></li>
+                <li><a href="farmasi.html">Farmasi</a></li>
+                <li><a href="pembayaran.html" class="active">Pembayaran</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+            </ul>
+
+
+            <button class="mobile-menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Process Stepper -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 0;">
+      <div class="container-sm">
+        <div class="process-stepper" data-aos="fade-down" style="margin-bottom: 1rem;">
+          <div class="process-stepper-container">
+            <div class="process-step completed">
+              <a href="pendaftaran.html" class="process-step-link">
+                <div class="process-step-number">1</div>
+                <i data-lucide="user-plus" class="process-step-icon"></i>
+                <span class="process-step-label">Pendaftaran</span>
+              </a>
+            </div>
+            <div class="process-step completed">
+              <a href="pemeriksaan.html" class="process-step-link">
+                <div class="process-step-number">2</div>
+                <i data-lucide="stethoscope" class="process-step-icon"></i>
+                <span class="process-step-label">Pemeriksaan</span>
+              </a>
+            </div>
+            <div class="process-step completed">
+              <a href="farmasi.html" class="process-step-link">
+                <div class="process-step-number">3</div>
+                <i data-lucide="pill" class="process-step-icon"></i>
+                <span class="process-step-label">Farmasi</span>
+              </a>
+            </div>
+            <div class="process-step active">
+              <a href="pembayaran.html" class="process-step-link">
+                <div class="process-step-number">4</div>
+                <i data-lucide="credit-card" class="process-step-icon"></i>
+                <span class="process-step-label">Pembayaran</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="section">
+        <div class="container-sm">
+            <div class="card" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="glass-card" style="padding: 0.75rem; border-radius: 12px; background: var(--primary-light);">
+                            <i data-lucide="credit-card" style="width: 24px; height: 24px; color: var(--primary-color);"></i>
+                        </div>
+                        <div>
+                            <h2 style="margin: 0; font-size: 1.25rem; color: var(--text-primary);">Form Pembayaran</h2>
+                            <p style="margin: 0.25rem 0 0 0; color: var(--text-secondary); font-size: 0.8125rem;">Tahap IV: Membayar Biaya Pemeriksaan, Obat, dan/atau Tes Lab</p>
+                            <p style="margin: 0.5rem 0 0 0; color: var(--text-light); font-size: 0.75rem; line-height: 1.5;">
+                              Lakukan pembayaran untuk semua layanan yang telah Anda terima.
+                              Kami menerima berbagai metode pembayaran untuk kenyamanan Anda.
+                              Jika menggunakan asuransi, pastikan data asuransi sudah terverifikasi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form id="pembayaranForm">
+                        <!-- Data Invoice -->
+                        <div class="mb-4" data-aos="fade-up"100">
+                            <h3 class="d-flex align-items-center gap-2 mb-2" style="color: var(--primary-color); font-size: 1.125rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                                Data Invoice & Pasien
+                            </h3>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Nomor invoice akan otomatis dibuat oleh sistem. Simpan invoice ini sebagai bukti pembayaran resmi.
+                            </p>
+
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nomor Invoice *</label>
+                                        <input type="text" name="nomorInvoice" required class="form-control" placeholder="INV/2025/XXXXX" readonly>
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Tanggal Pembayaran *</label>
+                                        <input type="date" name="tanggalPembayaran" required class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nomor Rekam Medis *</label>
+                                        <input type="text" name="nomorRM" required class="form-control" placeholder="Masukkan nomor RM">
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nama Pasien *</label>
+                                        <input type="text" name="namaPasien" required class="form-control" placeholder="Nama lengkap pasien">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rincian Biaya -->
+                        <div class="mb-4" data-aos="fade-up"200">
+                            <h3 class="d-flex align-items-center gap-2 mb-2" style="color: var(--primary-color); font-size: 1.125rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <i data-lucide="receipt" style="width: 18px; height: 18px;"></i>
+                                Rincian Biaya
+                            </h3>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Berikut adalah rincian biaya untuk semua layanan yang telah Anda terima.
+                              Anda dapat menambahkan atau menghapus item sesuai kebutuhan.
+                            </p>
+
+                            <div class="biaya-item">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox" id="pendaftaran" checked onchange="calculateTotal()">
+                                    <div style="flex: 1;">
+                                        <label for="pendaftaran" class="form-label" style="margin: 0; cursor: pointer;">Biaya Pendaftaran</label>
+                                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.5rem;">
+                                            <span>Rp</span>
+                                            <input type="number" name="biayaPendaftaran" value="50000" class="form-control biaya-input" style="flex: 1;" onchange="calculateTotal()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="biaya-item">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox" id="konsultasi" checked onchange="calculateTotal()">
+                                    <div style="flex: 1;">
+                                        <label for="konsultasi" class="form-label" style="margin: 0; cursor: pointer;">Biaya Konsultasi Dokter</label>
+                                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.5rem;">
+                                            <span>Rp</span>
+                                            <input type="number" name="biayaKonsultasi" value="150000" class="form-control biaya-input" style="flex: 1;" onchange="calculateTotal()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="biaya-item">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox" id="tindakan" onchange="calculateTotal()">
+                                    <div style="flex: 1;">
+                                        <label for="tindakan" class="form-label" style="margin: 0; cursor: pointer;">Biaya Tindakan Medis</label>
+                                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.5rem;">
+                                            <span>Rp</span>
+                                            <input type="number" name="biayaTindakan" value="0" class="form-control biaya-input" style="flex: 1;" onchange="calculateTotal()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="biaya-item">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox" id="laboratorium" onchange="calculateTotal()">
+                                    <div style="flex: 1;">
+                                        <label for="laboratorium" class="form-label" style="margin: 0; cursor: pointer;">Biaya Pemeriksaan Laboratorium</label>
+                                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.5rem;">
+                                            <span>Rp</span>
+                                            <input type="number" name="biayaLaboratorium" value="0" class="form-control biaya-input" style="flex: 1;" onchange="calculateTotal()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="biaya-item">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox" id="obat" onchange="calculateTotal()">
+                                    <div style="flex: 1;">
+                                        <label for="obat" class="form-label" style="margin: 0; cursor: pointer;">Biaya Obat-obatan</label>
+                                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.5rem;">
+                                            <span>Rp</span>
+                                            <input type="number" name="biayaObat" value="0" class="form-control biaya-input" style="flex: 1;" onchange="calculateTotal()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="biaya-item">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox" id="administrasi" checked onchange="calculateTotal()">
+                                    <div style="flex: 1;">
+                                        <label for="administrasi" class="form-label" style="margin: 0; cursor: pointer;">Biaya Administrasi</label>
+                                        <div class="d-flex align-items-center gap-2" style="margin-top: 0.5rem;">
+                                            <span>Rp</span>
+                                            <input type="number" name="biayaAdministrasi" value="25000" class="form-control biaya-input" style="flex: 1;" onchange="calculateTotal()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Asuransi & Diskon -->
+                        <div class="mb-4" data-aos="fade-up"300">
+                            <h3 class="d-flex align-items-center gap-2 mb-3" style="color: var(--primary-color); font-size: 1.125rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <i data-lucide="percent" style="width: 18px; height: 18px;"></i>
+                                Asuransi & Diskon
+                            </h3>
+
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Jenis Asuransi</label>
+                                        <select name="jenisAsuransi" class="form-control">
+                                            <option value="">Pilih jenis asuransi</option>
+                                            <option value="tidak-ada">Tidak Ada</option>
+                                            <option value="bpjs">BPJS Kesehatan</option>
+                                            <option value="asuransi-swasta">Asuransi Swasta</option>
+                                            <option value="jaminan-perusahaan">Jaminan Perusahaan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Nomor Asuransi</label>
+                                        <input type="text" name="nomorAsuransi" class="form-control" placeholder="Nomor kartu asuransi">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Persentase Ditanggung Asuransi (%)</label>
+                                        <input type="number" id="persentaseAsuransi" name="persentaseAsuransi" min="0" max="100" value="0" class="form-control" onchange="calculateTotal()">
+                                    </div>
+                                </div>
+                                <div class="col col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Diskon (Rp)</label>
+                                        <input type="number" id="diskon" name="diskon" value="0" class="form-control" onchange="calculateTotal()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ringkasan Pembayaran -->
+                        <div class="mb-4" data-aos="fade-up"400">
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">
+                              Ringkasan pembayaran akan otomatis dihitung berdasarkan rincian biaya dan potongan asuransi/diskon yang berlaku.
+                            </p>
+                            <div class="summary-card">
+                                <h3 class="d-flex align-items-center gap-2 mb-2" style="color: var(--primary-color); font-size: 1rem;">
+                                    <i data-lucide="receipt"></i>
+                                    Ringkasan Pembayaran
+                                </h3>
+                                <div class="summary-row">
+                                    <span>Subtotal</span>
+                                    <span id="subtotal">Rp 0</span>
+                                </div>
+                                <div class="summary-row" style="color: #ef4444;">
+                                    <span>Diskon</span>
+                                    <span id="diskonDisplay">- Rp 0</span>
+                                </div>
+                                <div class="summary-row" style="color: #10b981;">
+                                    <span>Ditanggung Asuransi</span>
+                                    <span id="asuransiDisplay">- Rp 0</span>
+                                </div>
+                                <div class="summary-total d-flex justify-content-between">
+                                    <span style="font-size: 0.9375rem; font-weight: 600;">Total yang Harus Dibayar</span>
+                                    <span style="font-size: 1.25rem; font-weight: 700;" id="totalBayar">Rp 0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metode Pembayaran -->
+                        <div class="mb-4" data-aos="fade-up"500">
+                            <h3 class="d-flex align-items-center gap-2 mb-2" style="color: var(--primary-color); font-size: 1.125rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <i data-lucide="wallet" style="width: 18px; height: 18px;"></i>
+                                Metode Pembayaran
+                            </h3>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Pilih metode pembayaran yang paling nyaman untuk Anda. Kami menerima pembayaran tunai, kartu debit/kredit,
+                              transfer bank, dan e-wallet. Untuk pembayaran non-tunai, pastikan nomor referensi transaksi diisi dengan benar.
+                            </p>
+
+                            <div class="form-group">
+                                <label class="form-label">Metode Pembayaran *</label>
+                                <select name="metodePembayaran" required class="form-control">
+                                    <option value="">Pilih metode pembayaran</option>
+                                    <option value="tunai">Tunai / Cash</option>
+                                    <option value="debit">Kartu Debit</option>
+                                    <option value="kredit">Kartu Kredit</option>
+                                    <option value="transfer">Transfer Bank</option>
+                                    <option value="ewallet">E-Wallet (GoPay, OVO, Dana, dll)</option>
+                                    <option value="qris">QRIS</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Nomor Referensi / Transaksi</label>
+                                <input type="text" name="nomorReferensi" class="form-control" placeholder="Nomor referensi pembayaran (opsional untuk tunai)">
+                            </div>
+                        </div>
+
+                        <!-- Catatan -->
+                        <div class="mb-4" data-aos="fade-up"600">
+                            <h3 class="d-flex align-items-center gap-2 mb-2" style="color: var(--primary-color); font-size: 1.125rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+                                <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                                Catatan Pembayaran
+                            </h3>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                              Jika ada catatan khusus terkait pembayaran atau permintaan khusus lainnya, silakan tuliskan di sini.
+                            </p>
+
+                            <div class="form-group">
+                                <label class="form-label">Catatan</label>
+                                <textarea name="catatan" rows="4" class="form-control" placeholder="Catatan tambahan untuk pembayaran"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="d-flex gap-2 action-buttons-container" style="margin-top: 1.5rem; margin-bottom: 0; padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem;" data-aos="fade-up"700">
+                            <button type="submit" class="btn btn-primary btn-lg" style="flex: 1;">
+                                <i data-lucide="check-circle"></i>
+                                Proses Pembayaran
+                            </button>
+                            <button type="reset" onclick="resetForm()" class="btn btn-secondary btn-lg">
+                                <i data-lucide="x"></i>
+                                Batal
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 RS XYZ - Rumah Sakit XYZ</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Generate invoice number
+        document.querySelector('input[name="nomorInvoice"]').value = 'INV/' + new Date().getFullYear() + '/' + Date.now().toString().slice(-6);
+
+        // Set today's date
+        document.querySelector('input[name="tanggalPembayaran"]').valueAsDate = new Date();
+
+        function calculateTotal() {
+            let subtotal = 0;
+
+            const checkboxes = {
+                'pendaftaran': 'biayaPendaftaran',
+                'konsultasi': 'biayaKonsultasi',
+                'tindakan': 'biayaTindakan',
+                'laboratorium': 'biayaLaboratorium',
+                'obat': 'biayaObat',
+                'administrasi': 'biayaAdministrasi'
+            };
+
+            Object.keys(checkboxes).forEach(id => {
+                const checkbox = document.getElementById(id);
+                const input = document.querySelector(`input[name="${checkboxes[id]}"]`);
+                if (checkbox && checkbox.checked && input) {
+                    subtotal += parseInt(input.value) || 0;
+                }
+            });
+
+            const diskon = parseInt(document.getElementById('diskon').value) || 0;
+            const persentaseAsuransi = parseInt(document.getElementById('persentaseAsuransi').value) || 0;
+
+            const totalSetelahDiskon = subtotal - diskon;
+            const nilaiAsuransi = (totalSetelahDiskon * persentaseAsuransi) / 100;
+            const totalBayar = Math.max(0, totalSetelahDiskon - nilaiAsuransi);
+
+            document.getElementById('subtotal').textContent = 'Rp ' + subtotal.toLocaleString('id-ID');
+            document.getElementById('diskonDisplay').textContent = '- Rp ' + diskon.toLocaleString('id-ID');
+            document.getElementById('asuransiDisplay').textContent = '- Rp ' + Math.round(nilaiAsuransi).toLocaleString('id-ID') + ' (' + persentaseAsuransi + '%)';
+            document.getElementById('totalBayar').textContent = 'Rp ' + Math.round(totalBayar).toLocaleString('id-ID');
+        }
+
+        function resetForm() {
+            document.getElementById('pendaftaran').checked = true;
+            document.getElementById('konsultasi').checked = true;
+            document.getElementById('administrasi').checked = true;
+            document.getElementById('tindakan').checked = false;
+            document.getElementById('laboratorium').checked = false;
+            document.getElementById('obat').checked = false;
+
+            document.querySelector('input[name="biayaPendaftaran"]').value = 50000;
+            document.querySelector('input[name="biayaKonsultasi"]').value = 150000;
+            document.querySelector('input[name="biayaAdministrasi"]').value = 25000;
+            document.getElementById('diskon').value = 0;
+            document.getElementById('persentaseAsuransi').value = 0;
+
+            calculateTotal();
+        }
+
+        document.getElementById('pembayaranForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            const total = document.getElementById('totalBayar').textContent;
+
+            if (typeof HealthSystem !== 'undefined' && HealthSystem.showToast) {
+                HealthSystem.showToast(`Pembayaran berhasil diproses! Total: ${total}`, 'success');
+            } else {
+                alert(`✅ Pembayaran berhasil diproses!\n\nInvoice: ${data.nomorInvoice}\nPasien: ${data.namaPasien}\n${total}\n\nMetode: ${data.metodePembayaran}\n\nTerima kasih atas pembayaran Anda!`);
+            }
+        });
+
+        // Initialize calculation on page load
+        calculateTotal();
+    </script>
+</body>
+</html>

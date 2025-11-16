@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tentang Kami - Rumah Sakit XYZ dengan komitmen memberikan pelayanan kesehatan terbaik"
+    />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Tentang Kami - RS XYZ</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Responsive adjustments for tentang.html */
+      @media (max-width: 768px) {
+        .image-container {
+          height: 250px !important;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr !important;
+          gap: 1.5rem !important;
+        }
+
+        .row {
+          flex-direction: column;
+        }
+
+        .col-md-6 {
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+
+        .card {
+          margin-bottom: 1rem;
+        }
+
+        .card .image-container {
+          height: 200px !important;
+        }
+
+        h2,
+        h3 {
+          font-size: clamp(1rem, 3vw, 1.25rem) !important;
+        }
+
+        p,
+        li {
+          font-size: 0.8125rem !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .image-container {
+          height: 200px !important;
+        }
+
+        .card .image-container {
+          height: 150px !important;
+        }
+
+        .features-grid {
+          gap: 1rem !important;
+        }
+
+        .section {
+          padding: 1.5rem 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">
+          <div class="navbar-logo">
+            <img
+              src="logo.png"
+              alt="RS XYZ"
+              style="width: 100%; height: 100%; object-fit: contain"
+            />
+          </div>
+          <div>
+            <div class="navbar-title">RS XYZ</div>
+            <div class="navbar-subtitle">Rumah Sakit XYZ</div>
+          </div>
+        </a>
+
+        <ul class="navbar-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pemeriksaan.html">Pemeriksaan</a></li>
+          <li><a href="farmasi.html">Farmasi</a></li>
+          <li><a href="pembayaran.html">Pembayaran</a></li>
+          <li><a href="tentang.html" class="active">Tentang Kami</a></li>
+        </ul>
+
+        <button class="mobile-menu-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 3rem 0">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h1
+            class="hero-title"
+            style="font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 1rem"
+          >
+            Tentang Rumah Sakit XYZ
+          </h1>
+          <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto">
+            Komitmen kami adalah memberikan pelayanan kesehatan berkualitas
+            tinggi dengan teknologi modern dan tim medis profesional yang
+            berpengalaman.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section">
+      <div class="container">
+        <div class="row" style="gap: 1.5rem; align-items: flex-start">
+          <div class="col col-md-6" data-aos="fade-right">
+            <div
+              class="image-container"
+              style="
+                height: 350px;
+                border-radius: var(--border-radius-lg);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&q=80"
+                alt="Hospital Facility"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+          <div
+            class="col-special"
+            data-aos="fade-left"
+            style="display: flex; flex-direction: column; gap: 0.75rem"
+          >
+            <h2
+              style="
+                font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+                margin-bottom: 0;
+                color: var(--primary-color);
+              "
+            >
+              Visi & Misi Kami
+            </h2>
+            <div>
+              <div>
+                <h3
+                  style="
+                    font-size: 1.125rem;
+                    margin-bottom: 0.5rem;
+                    color: var(--text-primary);
+                  "
+                >
+                  <i
+                    data-lucide="eye"
+                    style="
+                      width: 20px;
+                      height: 20px;
+                      display: inline-block;
+                      vertical-align: middle;
+                      margin-right: 0.5rem;
+                      color: var(--primary-color);
+                    "
+                  ></i>
+                  Visi
+                </h3>
+                <p
+                  style="
+                    font-size: 0.875rem;
+                    color: var(--text-secondary);
+                    line-height: 1.6;
+                    margin: 0;
+                  "
+                >
+                  Menjadi rumah sakit terdepan yang inovatif dan terpercaya
+                  dalam memberikan solusi kesehatan komprehensif bagi masyarakat
+                  dengan standar pelayanan internasional.
+                </p>
+              </div>
+              <div>
+                <h3
+                  style="
+                    font-size: 1.125rem;
+                    margin-bottom: 0.5rem;
+                    color: var(--text-primary);
+                  "
+                >
+                  <i
+                    data-lucide="target"
+                    style="
+                      width: 20px;
+                      height: 20px;
+                      display: inline-block;
+                      vertical-align: middle;
+                      margin-right: 0.5rem;
+                      color: var(--primary-color);
+                    "
+                  ></i>
+                  Misi
+                </h3>
+                <ul
+                  style="
+                    font-size: 0.875rem;
+                    color: var(--text-secondary);
+                    line-height: 1.6;
+                    padding-left: 1.5rem;
+                    margin: 0;
+                  "
+                >
+                  <li style="margin-bottom: 0.5rem">
+                    Menyediakan pelayanan kesehatan berkualitas tinggi dengan
+                    pendekatan yang berpusat pada pasien
+                  </li>
+                  <li style="margin-bottom: 0.5rem">
+                    Mengembangkan teknologi medis terdepan untuk diagnosis dan
+                    pengobatan yang akurat
+                  </li>
+                  <li style="margin-bottom: 0.5rem">
+                    Membangun tim medis profesional yang terus berkembang
+                    melalui pendidikan dan pelatihan
+                  </li>
+                  <li style="margin-bottom: 0.5rem">
+                    Menjaga standar keselamatan dan kualitas pelayanan yang
+                    tinggi
+                  </li>
+                  <li>
+                    Memberikan akses pelayanan kesehatan yang terjangkau dan
+                    merata
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" style="background: var(--bg-gray)">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            style="
+              font-size: clamp(1.25rem, 3vw, 1.5rem);
+              margin-bottom: 0.5rem;
+              color: var(--text-primary);
+            "
+          >
+            Mengapa Memilih Kami?
+          </h2>
+          <p
+            style="
+              font-size: 0.8125rem;
+              color: var(--text-light);
+              margin-bottom: 3rem;
+            "
+          >
+            Keunggulan yang membuat kami menjadi pilihan utama untuk kesehatan
+            Anda
+          </p>
+        </div>
+
+        <div
+          class="features-grid"
+          style="
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+          "
+        >
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop"
+                alt="Expert Doctors"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h3 class="feature-title">Dokter Berpengalaman</h3>
+            <p class="feature-description">
+              Tim dokter spesialis dengan pengalaman bertahun-tahun dan
+              sertifikasi internasional, siap memberikan pelayanan terbaik untuk
+              kesehatan Anda.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=300&fit=crop"
+                alt="Modern Equipment"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="cpu"></i>
+            </div>
+            <h3 class="feature-title">Teknologi Modern</h3>
+            <p class="feature-description">
+              Peralatan medis terkini dan teknologi canggih untuk diagnosis yang
+              akurat dan pengobatan yang efektif, mengikuti standar
+              internasional.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop&q=80"
+                alt="Layanan 24/7"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="clock"></i>
+            </div>
+            <h3 class="feature-title">Layanan 24/7</h3>
+            <p class="feature-description">
+              Unit Gawat Darurat yang beroperasi 24 jam sehari, 7 hari seminggu,
+              siap menangani keadaan darurat medis kapan saja Anda membutuhkan.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop"
+                alt="Patient Care"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+            <h3 class="feature-title">Pelayanan Ramah</h3>
+            <p class="feature-description">
+              Tim perawat dan staf yang profesional, ramah, dan berkomitmen
+              memberikan pengalaman pelayanan yang nyaman dan memuaskan bagi
+              setiap pasien.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
+                alt="Accreditation"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3 class="feature-title">Terakreditasi</h3>
+            <p class="feature-description">
+              Terakreditasi dengan standar tinggi dan memiliki sertifikasi
+              kualitas internasional, menjamin pelayanan kesehatan yang aman dan
+              terpercaya.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=300&fit=crop"
+                alt="Affordable"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="wallet"></i>
+            </div>
+            <h3 class="feature-title">Terjangkau</h3>
+            <p class="feature-description">
+              Sistem pembayaran yang transparan dengan berbagai pilihan metode
+              pembayaran dan kerjasama dengan berbagai asuransi kesehatan untuk
+              kemudahan pasien.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Medical Team -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            style="
+              font-size: clamp(1.25rem, 3vw, 1.5rem);
+              margin-bottom: 0.5rem;
+              color: var(--text-primary);
+            "
+          >
+            Tim Medis Profesional
+          </h2>
+          <p
+            style="
+              font-size: 0.8125rem;
+              color: var(--text-light);
+              margin-bottom: 3rem;
+            "
+          >
+            Dokter spesialis berpengalaman yang siap melayani kesehatan Anda
+          </p>
+        </div>
+
+        <div
+          class="features-grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"
+        >
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop"
+                alt="Dr. Specialist"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <h3 class="feature-title">Dr. Ahmad Wijaya, Sp.PD</h3>
+            <p
+              class="feature-description"
+              style="
+                color: var(--text-secondary);
+                font-size: 0.75rem;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Spesialis Penyakit Dalam
+            </p>
+            <p class="feature-description">
+              Dokter spesialis dengan pengalaman 15+ tahun dalam menangani
+              berbagai penyakit dalam. Berpengalaman di rumah sakit terkemuka.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop"
+                alt="Dr. Specialist"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <h3 class="feature-title">Dr. Siti Nurhaliza, Sp.OG</h3>
+            <p
+              class="feature-description"
+              style="
+                color: var(--text-secondary);
+                font-size: 0.75rem;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Spesialis Obstetri & Ginekologi
+            </p>
+            <p class="feature-description">
+              Ahli dalam kesehatan reproduksi wanita dan kehamilan.
+              Berpengalaman menangani ribuan kelahiran dan operasi ginekologi.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&h=300&fit=crop"
+                alt="Dr. Specialist"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <h3 class="feature-title">Dr. Budi Santoso, Sp.JP</h3>
+            <p
+              class="feature-description"
+              style="
+                color: var(--text-secondary);
+                font-size: 0.75rem;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Spesialis Jantung & Pembuluh Darah
+            </p>
+            <p class="feature-description">
+              Spesialis jantung dengan keahlian dalam kateterisasi jantung dan
+              intervensi kardiovaskular. Terlatih di pusat jantung terkemuka.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 200px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop"
+                alt="Dr. Specialist"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <h3 class="feature-title">Dr. Rina Kartika, Sp.A</h3>
+            <p
+              class="feature-description"
+              style="
+                color: var(--text-secondary);
+                font-size: 0.75rem;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Spesialis Anak
+            </p>
+            <p class="feature-description">
+              Dokter spesialis anak yang berpengalaman dalam menangani berbagai
+              kondisi kesehatan anak, dari bayi hingga remaja.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="section" style="background: var(--bg-gray)">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            style="
+              font-size: clamp(1.25rem, 3vw, 1.5rem);
+              margin-bottom: 0.5rem;
+              color: var(--text-primary);
+            "
+          >
+            Fasilitas & Layanan
+          </h2>
+          <p
+            style="
+              font-size: 0.8125rem;
+              color: var(--text-light);
+              margin-bottom: 2rem;
+            "
+          >
+            Fasilitas lengkap dan modern untuk mendukung pelayanan kesehatan
+            terbaik
+          </p>
+        </div>
+
+        <div
+          class="features-grid"
+          style="
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+          "
+        >
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop&q=80"
+                alt="Emergency Room"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="alert-circle"></i>
+            </div>
+            <h3 class="feature-title">Unit Gawat Darurat 24/7</h3>
+            <p class="feature-description">
+              Unit Gawat Darurat yang dilengkapi dengan peralatan canggih dan
+              tim medis berpengalaman, siap menangani kasus darurat medis kapan
+              saja. Dilengkapi dengan ambulans standar internasional dan sistem
+              komunikasi yang terintegrasi.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&h=400&fit=crop&q=80"
+                alt="Laboratory"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="microscope"></i>
+            </div>
+            <h3 class="feature-title">Laboratorium Modern</h3>
+            <p class="feature-description">
+              Laboratorium dengan teknologi terkini untuk berbagai jenis
+              pemeriksaan, termasuk hematologi, kimia klinik, mikrobiologi, dan
+              patologi anatomi. Hasil pemeriksaan akurat dan cepat dengan sistem
+              informasi terintegrasi.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&q=80"
+                alt="Radiology"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="scan"></i>
+            </div>
+            <h3 class="feature-title">Radiologi & Imaging</h3>
+            <p class="feature-description">
+              Unit radiologi dengan peralatan canggih seperti CT Scan, MRI, USG
+              4D, dan X-Ray digital. Dilengkapi dengan sistem PACS (Picture
+              Archiving and Communication System) untuk akses hasil pemeriksaan
+              yang mudah dan cepat.
+            </p>
+          </div>
+
+          <div class="feature-card" data-aos="fade-up">
+            <div
+              class="image-container"
+              style="
+                height: 180px;
+                margin-bottom: 1rem;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+              "
+            >
+              <img
+                src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&h=400&fit=crop&q=80"
+                alt="Pharmacy"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="feature-icon">
+              <i data-lucide="pill"></i>
+            </div>
+            <h3 class="feature-title">Apotek Terlengkap</h3>
+            <p class="feature-description">
+              Apotek dengan stok obat lengkap dan apoteker profesional yang siap
+              memberikan konsultasi penggunaan obat. Sistem informasi obat
+              terintegrasi untuk memastikan keamanan dan efektivitas pengobatan
+              pasien.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section
+      class="section"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--primary-hover) 100%
+        );
+        color: white;
+      "
+    >
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            style="
+              font-size: clamp(1.25rem, 3vw, 1.5rem);
+              margin-bottom: 2rem;
+              color: white;
+            "
+          >
+            Pencapaian & Statistik
+          </h2>
+        </div>
+
+        <div
+          class="features-grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"
+        >
+          <div class="text-center" data-aos="zoom-in">
+            <div
+              style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem"
+            >
+              15+
+            </div>
+            <div style="font-size: 0.875rem; opacity: 0.9">
+              Tahun Pengalaman
+            </div>
+          </div>
+          <div class="text-center" data-aos="zoom-in">
+            <div
+              style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem"
+            >
+              50+
+            </div>
+            <div style="font-size: 0.875rem; opacity: 0.9">
+              Dokter Spesialis
+            </div>
+          </div>
+          <div class="text-center" data-aos="zoom-in">
+            <div
+              style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem"
+            >
+              500+
+            </div>
+            <div style="font-size: 0.875rem; opacity: 0.9">
+              Pasien per Bulan
+            </div>
+          </div>
+          <div class="text-center" data-aos="zoom-in">
+            <div
+              style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem"
+            >
+              24/7
+            </div>
+            <div style="font-size: 0.875rem; opacity: 0.9">
+              Layanan Tersedia
+            </div>
+          </div>
+          <div class="text-center" data-aos="zoom-in">
+            <div
+              style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem"
+            >
+              98%
+            </div>
+            <div style="font-size: 0.875rem; opacity: 0.9">
+              Tingkat Kepuasan
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            style="
+              font-size: clamp(1.25rem, 3vw, 1.5rem);
+              margin-bottom: 0.5rem;
+              color: var(--text-primary);
+            "
+          >
+            Informasi Kontak
+          </h2>
+          <p
+            style="
+              font-size: 0.8125rem;
+              color: var(--text-light);
+              margin-bottom: 3rem;
+            "
+          >
+            Hubungi kami untuk informasi lebih lanjut atau pertanyaan tentang
+            layanan kami
+          </p>
+        </div>
+
+        <div
+          class="features-grid"
+          style="
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+          "
+        >
+          <div class="feature-card text-center" data-aos="fade-up">
+            <div
+              class="feature-icon"
+              style="
+                background: var(--primary-light);
+                padding: 1.5rem;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i
+                data-lucide="map-pin"
+                style="width: 40px; height: 40px; color: var(--primary-color)"
+              ></i>
+            </div>
+            <h3 class="feature-title">Alamat</h3>
+            <p class="feature-description">
+              Jl. Kesehatan No. 123<br />
+              Jakarta Pusat 10110<br />
+              Indonesia
+            </p>
+          </div>
+
+          <div class="feature-card text-center" data-aos="fade-up">
+            <div
+              class="feature-icon"
+              style="
+                background: var(--primary-light);
+                padding: 1.5rem;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i
+                data-lucide="phone"
+                style="width: 40px; height: 40px; color: var(--primary-color)"
+              ></i>
+            </div>
+            <h3 class="feature-title">Telepon</h3>
+            <p class="feature-description">
+              (021) 1234-5678<br />
+              (021) 1234-5679<br />
+              Emergency: (021) 1234-9999
+            </p>
+          </div>
+
+          <div class="feature-card text-center" data-aos="fade-up">
+            <div
+              class="feature-icon"
+              style="
+                background: var(--primary-light);
+                padding: 1.5rem;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i
+                data-lucide="mail"
+                style="width: 40px; height: 40px; color: var(--primary-color)"
+              ></i>
+            </div>
+            <h3 class="feature-title">Email</h3>
+            <p class="feature-description">
+              info@rsxyz.com<br />
+              emergency@rsxyz.com<br />
+              appointment@rsxyz.com
+            </p>
+          </div>
+
+          <div class="feature-card text-center" data-aos="fade-up">
+            <div
+              class="feature-icon"
+              style="
+                background: var(--primary-light);
+                padding: 1.5rem;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i
+                data-lucide="clock"
+                style="width: 40px; height: 40px; color: var(--primary-color)"
+              ></i>
+            </div>
+            <h3 class="feature-title">Jam Operasional</h3>
+            <p class="feature-description">
+              Senin - Jumat: 07:00 - 21:00<br />
+              Sabtu - Minggu: 08:00 - 18:00<br />
+              UGD: 24 Jam
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">© 2025 RS XYZ - Rumah Sakit XYZ</p>
+          <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.75rem">
+            Jl. Kesehatan No. 123, Jakarta | Telp: (021) 1234-5678 | Email:
+            info@rsxyz.com
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

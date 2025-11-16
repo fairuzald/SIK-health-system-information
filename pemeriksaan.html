@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Form Pemeriksaan Dokter - Rumah Sakit</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">
+          <div class="navbar-logo">
+            <img src="logo.png" alt="RS XYZ" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div>
+            <div class="navbar-title">RS XYZ</div>
+            <div class="navbar-subtitle">Rumah Sakit XYZ</div>
+          </div>
+        </a>
+
+        <ul class="navbar-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pemeriksaan.html" class="active">Pemeriksaan</a></li>
+          <li><a href="farmasi.html">Farmasi</a></li>
+          <li><a href="pembayaran.html">Pembayaran</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+
+
+        <button class="mobile-menu-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Process Stepper -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 0;">
+      <div class="container-sm">
+        <div class="process-stepper" data-aos="fade-down" style="margin-bottom: 1rem;">
+          <div class="process-stepper-container">
+            <div class="process-step completed">
+              <a href="pendaftaran.html" class="process-step-link">
+                <div class="process-step-number">1</div>
+                <i data-lucide="user-plus" class="process-step-icon"></i>
+                <span class="process-step-label">Pendaftaran</span>
+              </a>
+            </div>
+            <div class="process-step active">
+              <a href="pemeriksaan.html" class="process-step-link">
+                <div class="process-step-number">2</div>
+                <i data-lucide="stethoscope" class="process-step-icon"></i>
+                <span class="process-step-label">Pemeriksaan</span>
+              </a>
+            </div>
+            <div class="process-step">
+              <a href="farmasi.html" class="process-step-link">
+                <div class="process-step-number">3</div>
+                <i data-lucide="pill" class="process-step-icon"></i>
+                <span class="process-step-label">Farmasi</span>
+              </a>
+            </div>
+            <div class="process-step">
+              <a href="pembayaran.html" class="process-step-link">
+                <div class="process-step-number">4</div>
+                <i data-lucide="credit-card" class="process-step-icon"></i>
+                <span class="process-step-label">Pembayaran</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="section">
+      <div class="container-sm">
+        <div class="card" data-aos="fade-up">
+          <div class="card-header">
+            <div class="d-flex flex-column flex-md-row align-items-md-center gap-2">
+              <div
+                class="glass-card"
+                style="padding: 0.75rem; border-radius: 12px; background: var(--primary-light); width: fit-content; flex-shrink: 0;"
+              >
+                <i
+                  data-lucide="clipboard-check"
+                  style="width: 24px; height: 24px; color: var(--primary-color);"
+                ></i>
+              </div>
+              <div>
+                <h2 style="margin: 0; font-size: 1.25rem; color: var(--text-primary);">
+                  Form Pemeriksaan Dokter
+                </h2>
+                <p
+                  style="
+                    margin: 0.25rem 0 0 0;
+                    color: var(--text-secondary);
+                    font-size: 0.8125rem;
+                  "
+                >
+                  Tahap II: Pasien Diperiksa Dokter - Data Medis Pasien
+                </p>
+                <p
+                  style="
+                    margin: 0.5rem 0 0 0;
+                    color: var(--text-light);
+                    font-size: 0.75rem;
+                    line-height: 1.5;
+                  "
+                >
+                  Dokter akan melakukan pemeriksaan menyeluruh berdasarkan keluhan dan gejala yang Anda alami.
+                  Informasi yang akurat membantu dokter memberikan diagnosis dan rencana pengobatan yang tepat.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <form id="pemeriksaanForm">
+              <!-- Data Pasien & Jadwal -->
+              <div class="mb-4" data-aos="fade-up"100">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-2"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i data-lucide="user" style="width: 18px; height: 18px"></i>
+                  Data Pasien & Jadwal
+                </h3>
+                <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem; padding-left: 1rem; line-height: 1.5;">
+                  Pastikan nomor Rekam Medis dan data pasien sudah benar.
+                  Waktu pemeriksaan akan digunakan untuk pencatatan riwayat medis.
+                </p>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Nomor Rekam Medis *</label>
+                      <input
+                        type="text"
+                        name="nomorRM"
+                        required
+                        class="form-control"
+                        placeholder="Masukkan nomor RM"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Nama Pasien *</label>
+                      <input
+                        type="text"
+                        name="namaPasien"
+                        required
+                        class="form-control"
+                        placeholder="Nama lengkap pasien"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Tanggal Pemeriksaan *</label>
+                      <input
+                        type="date"
+                        name="tanggalPemeriksaan"
+                        required
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Waktu Pemeriksaan *</label>
+                      <input
+                        type="time"
+                        name="waktuPemeriksaan"
+                        required
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Data Dokter -->
+              <div class="mb-4" data-aos="fade-up"200">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="stethoscope"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                  Data Dokter & Poliklinik
+                </h3>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Nama Dokter *</label>
+                      <input
+                        type="text"
+                        name="namaDokter"
+                        required
+                        class="form-control"
+                        placeholder="dr. Nama Dokter, Sp.XX"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Spesialisasi</label>
+                      <select name="spesialisDokter" class="form-control">
+                        <option value="">Pilih spesialisasi</option>
+                        <option value="umum">Dokter Umum</option>
+                        <option value="penyakit-dalam">Penyakit Dalam</option>
+                        <option value="anak">Anak</option>
+                        <option value="kandungan">Kandungan</option>
+                        <option value="bedah">Bedah</option>
+                        <option value="jantung">Jantung</option>
+                        <option value="kulit">Kulit & Kelamin</option>
+                        <option value="mata">Mata</option>
+                        <option value="tht">THT</option>
+                        <option value="saraf">Saraf</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Poliklinik</label>
+                  <input
+                    type="text"
+                    name="poliklinik"
+                    class="form-control"
+                    placeholder="Nama poliklinik"
+                  />
+                </div>
+              </div>
+
+              <!-- Keluhan Utama -->
+              <div class="mb-4" data-aos="fade-up"300">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="message-square"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                  Keluhan Utama Pasien
+                </h3>
+
+                <div class="form-group">
+                  <label class="form-label">Keluhan *</label>
+                  <textarea
+                    name="keluhan"
+                    required
+                    rows="4"
+                    class="form-control"
+                    placeholder="Keluhan yang dirasakan pasien"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Tanda-tanda Vital -->
+              <div class="mb-4" data-aos="fade-up"400">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="activity"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                  Tanda-tanda Vital
+                </h3>
+
+                <div class="row">
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Tekanan Darah *</label>
+                      <input
+                        type="text"
+                        name="tekananDarah"
+                        required
+                        class="form-control"
+                        placeholder="120/80 mmHg"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Denyut Nadi *</label>
+                      <input
+                        type="text"
+                        name="denyutNadi"
+                        required
+                        class="form-control"
+                        placeholder="80 x/menit"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Suhu Tubuh *</label>
+                      <input
+                        type="text"
+                        name="suhuTubuh"
+                        required
+                        class="form-control"
+                        placeholder="36.5 °C"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Berat Badan</label>
+                      <input
+                        type="text"
+                        name="beratBadan"
+                        class="form-control"
+                        placeholder="65 kg"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Tinggi Badan</label>
+                      <input
+                        type="text"
+                        name="tinggiBadan"
+                        class="form-control"
+                        placeholder="170 cm"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Anamnesa & Pemeriksaan -->
+              <div class="mb-4" data-aos="fade-up"500">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="file-text"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                  Anamnesa & Pemeriksaan Fisik
+                </h3>
+
+                <div class="form-group">
+                  <label class="form-label">Anamnesa (Riwayat Penyakit)</label>
+                  <textarea
+                    name="anamnesa"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Riwayat penyakit, obat yang dikonsumsi, alergi, dll"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Pemeriksaan Fisik *</label>
+                  <textarea
+                    name="pemeriksaanFisik"
+                    required
+                    rows="5"
+                    class="form-control"
+                    placeholder="Hasil pemeriksaan fisik pasien"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Diagnosis -->
+              <div class="mb-4" data-aos="fade-up"600">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i data-lucide="search" style="width: 18px; height: 18px"></i>
+                  Diagnosis
+                </h3>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Diagnosis *</label>
+                      <input
+                        type="text"
+                        name="diagnosis"
+                        required
+                        class="form-control"
+                        placeholder="Diagnosis penyakit"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Kode ICD-10</label>
+                      <input
+                        type="text"
+                        name="diagnosisKode"
+                        class="form-control"
+                        placeholder="Contoh: A09"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tindakan & Terapi -->
+              <div class="mb-4" data-aos="fade-up"700">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="syringe"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                  Tindakan & Terapi
+                </h3>
+
+                <div class="form-group">
+                  <label class="form-label">Tindakan Medis</label>
+                  <textarea
+                    name="tindakan"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Tindakan medis yang dilakukan"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Resep Obat</label>
+                  <textarea
+                    name="resepObat"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Daftar obat yang diresepkan beserta dosis dan aturan pakai"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Rujukan -->
+              <div class="mb-4" data-aos="fade-up"800">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i data-lucide="send" style="width: 18px; height: 18px"></i>
+                  Rujukan Pemeriksaan Penunjang
+                </h3>
+
+                <div class="row">
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Rujukan Laboratorium</label>
+                      <textarea
+                        name="rujukanLab"
+                        rows="4"
+                        class="form-control"
+                        placeholder="Jenis pemeriksaan lab yang diperlukan"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Rujukan Radiologi</label>
+                      <textarea
+                        name="rujukanRadiologi"
+                        rows="4"
+                        class="form-control"
+                        placeholder="Jenis pemeriksaan radiologi yang diperlukan"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Catatan & Kontrol -->
+              <div class="mb-4" data-aos="fade-up"900">
+                <h3
+                  class="d-flex align-items-center gap-2 mb-3"
+                  style="
+                    color: var(--primary-color);
+                    font-size: 1.125rem;
+                    border-left: 4px solid var(--primary-color);
+                    padding-left: 1rem;
+                  "
+                >
+                  <i
+                    data-lucide="calendar"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                  Catatan Tambahan & Jadwal Kontrol
+                </h3>
+
+                <div class="form-group">
+                  <label class="form-label">Catatan Dokter</label>
+                  <textarea
+                    name="catatanDokter"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Catatan atau instruksi tambahan untuk pasien"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Tanggal Kontrol Berikutnya</label>
+                  <input
+                    type="date"
+                    name="tanggalKontrol"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div
+                class="d-flex gap-2 action-buttons-container"
+                style="margin-top: 1.5rem; margin-bottom: 0; padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem;"
+                data-aos="fade-up"
+1000"
+              >
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+                  style="flex: 1"
+                >
+                  <i data-lucide="save"></i>
+                  Simpan Data Pemeriksaan
+                </button>
+                <button type="reset" class="btn btn-secondary btn-lg">
+                  <i data-lucide="x"></i>
+                  Batal
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">
+            © 2025 RS XYZ - Rumah Sakit XYZ
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document
+        .getElementById('pemeriksaanForm')
+        .addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData);
+
+          console.log('Data Pemeriksaan:', data);
+
+          if (typeof HealthSystem !== 'undefined' && HealthSystem.showToast) {
+            HealthSystem.showToast(
+              'Data pemeriksaan berhasil disimpan!',
+              'success'
+            );
+          } else {
+            alert(
+              `✅ Data pemeriksaan berhasil disimpan!\n\nPasien: ${data.namaPasien}\nDokter: ${data.namaDokter}\nDiagnosis: ${data.diagnosis}\n\nSilakan lanjut ke tahap farmasi & resep.`
+            );
+          }
+        });
+    </script>
+  </body>
+</html>
