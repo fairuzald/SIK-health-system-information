@@ -2,6 +2,13 @@
 
 Modern health service system with responsive and user-friendly interface for hospitals.
 
+## Identitas
+
+- **Nama**: Moh Fairuz Alauddin Yahya
+- **NIM**: 13522057
+- **Mata Kuliah**: Sistem Informasi Kesehatan (Medical Information System)
+- **Program Studi**: Informatika
+
 ## Folder Structure
 
 ```text
